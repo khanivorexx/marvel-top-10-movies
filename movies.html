@@ -1,0 +1,61 @@
+<!doctype html>
+<html data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marvel Top 10</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar is-black">
+        <div class="navbar-brand">
+          <a
+            class="navbar-item has-text-warning has-text-weight-bold is-size-4"
+            href="#"
+          >
+            MARVEL TOP 10
+          </a>
+        </div>
+
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#">Home</a>
+            <a class="navbar-item" href="#movies">Movies</a>
+            <a class="navbar-item" href="#about">About us</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero is-warning">
+        <div class="hero-body has-text-centered">
+          <p class="title is-2">Marvel Top 10 Movies</p>
+          <p class="subtitle">IMDb score rank</p>
+        </div>
+      </section>
+
+      <section class="section" id="movies">
+        <div
+          class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-4-cols-desktop"
+        >
+          <div class="grid" id="container-movies"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="about">
+      <div class="content has-text-centered">
+        <p><strong>Marvel Top 10</strong> · khanivore</p>
+
+        <p>Info: IMDb · © 2026</p>
+      </div>
+    </footer>
+
+    <script src="movies.js"></script>
+  </body>
+</html>

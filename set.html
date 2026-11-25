@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="timeot.css" />
+  </head>
+  <body>
+    <h1 id="out">0</h1>
+    <button onclick="stopinterval()">stop</button>
+    <button onclick="start()">start</button>
+    <h2 id="timeout">0</h2>
+    <h3 id="arav">0</h3>
+    <button onclick="ehel()" id="yagaan">ehel</button>
+  </body>
+  <script>
+    const out = document.getElementById("out");
+    let n = 0;
+    const addCount = () => {
+      n++;
+      out.textContent = n;
+    };
+    let interval = setInterval(addCount, 1000);
+    const stopinterval = () => {
+      clearInterval(interval);
+    };
+    const start = () => {
+      interval = setInterval(addCount, 1000);
+    };
+    const timeout = document.getElementById("timeout");
+    let a = 0;
+    setTimeout(() => {
+      a++;
+      timeout.textContent = "Tsag duuslaa!";
+      console.log("Tsag duuslaa!");
+    }, 3000);
+    const arav = document.getElementById("arav");
+    let b = 0;
+    const aravtool = setInterval(() => {
+      b++;
+      arav.textContent = b;
+    }, 1000);
+    const aravstop = () => {
+      clearInterval(aravtool);
+    };
+    setTimeout(aravstop, 10000);
+
+    const yagaan = document.getElementById("yagaan");
+    const changecolor = () => {
+      yagaan.classList.add("red");
+    };
+    const ehel = () => {
+      setTimeout(changecolor, 2000);
+    };
+  </script>
+</html>
