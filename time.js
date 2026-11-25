@@ -50,6 +50,7 @@ const updateDisplay = () => {
 //start button//
 startBtn.onclick = () => {
   if (timerId) return;
+  updateDisplay();
   timerId = setInterval(() => {
     seconds++;
     updateDisplay();
